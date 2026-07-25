@@ -4,7 +4,7 @@ const SKILLS = [
   { name: "HTML5", slug: "html5" },
   { name: "CSS3", slug: "css" },
   { name: "PHP", slug: "php" },
-  { name: "C#", slug: "csharp", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  { name: "C#", slug: "csharp", icon: "C#" },
   { name: "Laravel", slug: "laravel" },
   { name: "Blade", icon: Flame },
   { name: "React", slug: "react" },
@@ -14,7 +14,7 @@ const SKILLS = [
   { name: "GitHub", slug: "github" },
   { name: "Vercel", slug: "vercel" },
   { name: "Railway", slug: "railway" },
-  { name: "VS Code", slug: "vscode", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+  { name: "VS Code", slug: "vscode", icon: "VS" },
   { name: "Postman", slug: "postman" },
   { name: "Laragon", slug: "laragon" },
   { name: "XAMPP", slug: "xampp" },
@@ -166,7 +166,13 @@ export default function Skills({ language = "id" }) {
                   className="group flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-3 py-2 text-xs font-medium text-zinc-300 hover:text-zinc-50 hover:border-zinc-600 transition-colors"
                 >
                   {skill.icon ? (
-                    <skill.icon size={14} className="text-zinc-500 group-hover:text-zinc-400 transition-colors" />
+                    typeof skill.icon === "string" ? (
+                      <span className="inline-flex h-4 w-4 items-center justify-center rounded text-[10px] font-bold text-zinc-300 group-hover:text-zinc-100">
+                        {skill.icon}
+                      </span>
+                    ) : (
+                      <skill.icon size={14} className="text-zinc-500 group-hover:text-zinc-400 transition-colors" />
+                    )
                   ) : skill.iconUrl ? (
                     <img
                       src={skill.iconUrl}
