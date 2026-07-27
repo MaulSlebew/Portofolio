@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Mail, ArrowUpRight, MapPin, Send } from "lucide-react";
+import { Mail, ArrowUpRight, MapPin, Send, Code2, Users, Camera } from "lucide-react";
 
 const SOCIALS = [
-  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/ffffff", href: "https://github.com/" },
-  { name: "LinkedIn", icon: "https://cdn.simpleicons.org/linkedin/ffffff", href: "https://linkedin.com/" },
-  { name: "Instagram", icon: "https://cdn.simpleicons.org/instagram/ffffff", href: "https://instagram.com/" },
+  { name: "GitHub", icon: Code2, href: "https://github.com/" },
+  { name: "LinkedIn", icon: Users, href: "https://linkedin.com/" },
+  { name: "Instagram", icon: Camera, href: "https://instagram.com/" },
 ];
 
 export default function Contact({ language }) {
@@ -147,18 +147,21 @@ export default function Contact({ language }) {
                   {text.find}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  {SOCIALS.map((s) => (
-                    <a
-                      key={s.name}
-                      href={s.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2.5 text-sm text-zinc-300 hover:border-zinc-400 transition-colors"
-                    >
-                      <img src={s.icon} alt={s.name} className="h-[15px] w-[15px]" />
-                      {s.name}
-                    </a>
-                  ))}
+                  {SOCIALS.map((s) => {
+                    const IconComponent = s.icon;
+                    return (
+                      <a
+                        key={s.name}
+                        href={s.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2.5 text-sm text-zinc-300 hover:border-zinc-400 transition-colors"
+                      >
+                        <IconComponent size={15} />
+                        {s.name}
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
 
