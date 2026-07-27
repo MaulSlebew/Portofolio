@@ -22,7 +22,7 @@ const PROJECTS = [
         code: "03",
         name: "MPlay's",
         category: "Html + Tailwind · Playstation Rent",
-        image: "/images/projects/MPlays.png",
+        image: "/images/projects/Mplays.png",
         stack: ["Html", "Tailwind CSS"],
         link: "https://m-plays.vercel.app/",
     },
@@ -30,7 +30,7 @@ const PROJECTS = [
         code: "04",
         name: "Portfolio",
         category: "React + Tailwind CSS · Personal Portfolio",
-        image: "/images/projects/portfolio.png",
+        image: "/images/projects/Portfolio.png",
         stack: ["React", "Tailwind CSS"],
     },
     ];
