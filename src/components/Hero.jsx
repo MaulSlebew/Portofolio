@@ -59,12 +59,9 @@ export default function Hero({ language }) {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute inset-x-0 bottom-0 z-10"
+        className="pointer-events-none select-none absolute inset-x-0 bottom-0 z-10 overflow-hidden"
       >
-        <p
-          className="whitespace-nowrap text-center font-bold tracking-tighter leading-none text-zinc-800"
-          style={{ fontSize: "19vw" }}
-        >
+        <p className="whitespace-nowrap text-center font-bold tracking-tighter leading-none text-zinc-800 text-[40vw] sm:text-[19vw]">
           DEVELOPER
         </p>
         <div
