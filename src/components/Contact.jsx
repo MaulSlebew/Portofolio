@@ -4,7 +4,7 @@ import { Mail, ArrowUpRight, MapPin, Send, Code2, Users, Camera } from "lucide-r
 const SOCIALS = [
   { name: "GitHub", icon: Code2, href: "https://github.com/" },
   { name: "LinkedIn", icon: Users, href: "https://linkedin.com/" },
-  { name: "Instagram", icon: Camera, href: "https://instagram.com/" },
+  { name: "Instagram", icon: Camera, href: "https://instagram.com/_frdmlna.mr/" },
 ];
 
 export default function Contact({ language }) {
